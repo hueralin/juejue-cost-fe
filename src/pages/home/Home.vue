@@ -10,13 +10,13 @@
         <b>￥1314</b>
       </div>
       <div class="filter">
-        <div @click="isShowActionSheet = true">全部类型</div>
+        <div @click="isShowBillTypePopup = true">全部类型</div>
         <div></div>
       </div>
     </header>
     <main></main>
     <!-- 类型 -->
-    <bill-type-popup :show="isShowBillTypePopup" />
+    <bill-type-popup v-model:show="isShowBillTypePopup" v-model:value="selectedTypeIdRef" />
     <!-- 日期 -->
   </div>
 </template>
@@ -26,15 +26,16 @@ import { ref } from 'vue'
 import BillTypePopup from '@/components/BillTypePopup.vue'
 
 const isShowBillTypePopup = ref(false)
+const selectedTypeIdRef = ref(0)
 </script>
 
 <style scoped lang="scss">
 .home {
   header {
     height: 85px;
-    color: #fff;
+    color: $color-white;
     padding: $padding-large;
-    background-color: #007fff;
+    background-color: $color-primary;
 
     .expense, .income {
       font-size: $font-size-small;

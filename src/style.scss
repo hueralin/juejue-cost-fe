@@ -1,16 +1,21 @@
 // scss 全局变量
 
-$color-primary: #007fff;
+$color-primary: #007FFF;
+$color-white: #FFF;
+$color-gray: #F5F5F5;
 
 $font-size-small: 12px;
-$font-size-middle: 14px;
-$font-size-big: 16px;
+$font-size-normal: 14px;
+$font-size-big: 18px;
 $font-size-large: 24px;
 
 $padding-small: 10px;
 $padding-middle: 12px;
 $padding-big: 14px;
 $padding-large: 16px;
+
+$spacing-small: 5px;
+$spacing-normal: 10px;
 
 body {
   font-size: $font-size-small;
